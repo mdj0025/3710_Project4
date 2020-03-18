@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/currentBalanceLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="28dp"
+        android:paddingBottom="15dp"
+        android:text="Current Balance:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/currentBalanceAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintLeft_toRightOf="@+id/currentBalanceLbl"
+        app:layout_constraintStart_toEndOf="@+id/currentBalanceLbl"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dateOfTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/textview_border"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="03/17/2020"
+        android:maxWidth="125dp"
+        android:minWidth="125dp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentBalanceLbl" />
+
+    <EditText
+        android:id="@+id/transactionAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_border"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textAlignment="center"
+        android:text="0.0"
+        android:minWidth="75dp"
+        android:maxWidth="75dp"
+        app:layout_constraintLeft_toRightOf="@+id/dateOfTransaction"
+        app:layout_constraintTop_toTopOf="@id/dateOfTransaction" />
+
+    <EditText
+        android:id="@+id/reasonForTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_border"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textAlignment="center"
+        android:text="Reason for"
+        android:maxWidth="100dp"
+        android:minWidth="100dp"
+        app:layout_constraintLeft_toRightOf="@+id/transactionAmount"
+        app:layout_constraintTop_toTopOf="@id/transactionAmount" />
+
+    <Button
+        android:id="@+id/addTransaction"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/reasonForTransaction"
+        app:layout_constraintRight_toLeftOf="@+id/subtractTransaction"
+        app:layout_constraintTop_toTopOf="@+id/reasonForTransaction" />
+
+    <Button
+        android:id="@+id/subtractTransaction"
+        android:layout_width="45dp"
+        android:layout_height="46dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@+id/addTransaction"
+        app:layout_constraintTop_toTopOf="@+id/addTransaction" />
+
+    <TextView
+        android:id="@+id/historyLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:text="History:"
+        app:layout_constraintEnd_toStartOf="@+id/subtractTransaction"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactionAmount" />
+
+    <EditText
+        android:id="@+id/transactionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+
+        app:layout_constraintTop_toBottomOf="@+id/historyLbl"
+        tools:layout_editor_absoluteX="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
